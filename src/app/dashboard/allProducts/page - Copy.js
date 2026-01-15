@@ -1,7 +1,5 @@
 'use client'
 
-export const dynamic = 'force-dynamic'
-
 import { useForm } from "react-hook-form";
 import { useSearchParams } from 'next/navigation'
 import DashboardLayout from '@/components/dashboardlayout/page'
@@ -14,7 +12,7 @@ export default function AddProduct() {
   const id = searchParams.get('id')
   const [product, setProduct] = useState([])
 
- useEffect(() => {
+  useEffect(() => {
     if (id) {
       getProductDetail()
     }
