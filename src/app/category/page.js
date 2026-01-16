@@ -23,7 +23,7 @@ export default function Category() {
   async function getCategory() {
     try {
       const response = await fetch(
-        `http://localhost:3001/api/category/${query}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/category/${query}`,
         {
           method: 'GET',
         }
