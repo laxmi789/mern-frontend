@@ -1,7 +1,4 @@
 'use client';
-export const dynamic = 'force-dynamic'
-
-import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Link from 'next/link'
 import Header from '../../components/header/header.js'
@@ -9,16 +6,11 @@ import Footer from '../../components/footer/footer.js'
 
 
 export default function Category() {
-  const searchParams = useSearchParams();
-  const query = searchParams.get('category');
+  
   const [data, setData] = useState([]);
   const [btntext, setBtntext] = useState('Add To Cart')
 
-  useEffect(() => {
-    if (query) {
-      getCategory();
-    }
-  }, [query]);
+  
 
   async function getCategory() {
     try {
