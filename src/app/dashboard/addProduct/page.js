@@ -1,25 +1,19 @@
 'use client'
 
-export const dynamic = 'force-dynamic'
+
 
 import { useForm } from "react-hook-form";
-import { useSearchParams } from 'next/navigation'
+
 import DashboardLayout from '@/components/dashboardlayout/page'
 import { useState, useEffect } from "react";
 import { toast } from 'react-toastify'
 
 
 export default function AddProduct() {
-  const searchParams = useSearchParams()
-  const id = searchParams.get('id')
+  
   const [product, setProduct] = useState([])
 
- useEffect(() => {
-    if (id) {
-      getProductDetail()
-    }
-  }, [id])
-
+ 
   const {
     register,
     handleSubmit,
