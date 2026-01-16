@@ -15,7 +15,7 @@ export default function Category() {
   async function getCategory() {
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/category/${query}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/category/top`,
         {
           method: 'GET',
         }
@@ -65,7 +65,7 @@ export default function Category() {
       <div className="bg-white p-4 mx-auto max-w-[1400px]">
         <div className="title text-center">
 
-          <h2 className="font-bold text-4xl my-10">  <i className="md:uppercase">{query}</i></h2>
+          <h2 className="font-bold text-4xl my-10">  <i className="md:uppercase">top</i></h2>
           <span className="shap inline-flex"></span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
