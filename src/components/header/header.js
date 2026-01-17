@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FaShoppingCart, FaUser } from 'react-icons/fa'; // Import icons from Font Awesome
 
 
@@ -31,9 +32,9 @@ export default function Header(){
                 <p 
                 className="hover:text-[#6863af] font-medium text-black block text-[15px]">Home</p> </li>
               <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3"><p 
-                className="hover:text-[#6863af] font-medium text-black block text-[15px]">Category</p> </li>
+                className="hover:text-[#6863af] font-medium text-black block text-[15px]"><Link src="/#category">Category</Link></p> </li>
               <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3"><p 
-                className="hover:text-[#6863af] font-medium text-black block text-[15px]">Product</p> </li>
+                className="hover:text-[#6863af] font-medium text-black block text-[15px]"><Link src="/#products">Product</Link></p> </li>
               
             </ul>
 
