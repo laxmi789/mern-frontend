@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Category(){
     return(
         <div>
-    <div className="title text-center">
+    <div className="title text-center" id="category">
     <h2 className="font-bold text-4xl my-10"> Our Trending <i className="break-normal">Category</i></h2>
     </div>
     <div className="flex">
