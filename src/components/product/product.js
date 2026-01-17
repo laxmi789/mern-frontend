@@ -49,7 +49,7 @@ async function addToCart(id, name, price){
   }
 
     return(
-        <div className="bg-white p-4 mx-auto max-w-[1400px]">
+        <div className="bg-white p-4 mx-auto max-w-[1400px]" id="products">
        <div className="title text-center">
 
 <h2 className="font-bold text-4xl my-10"> Our Trending <i className="break-normal">Products</i></h2>
