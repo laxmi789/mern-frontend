@@ -67,7 +67,7 @@ export default function Category() {
 
   if (!data){
     return(
-      <div>Loading</div>
+      <div>Loading data is not</div>
     )
   }
 
@@ -116,3 +116,4 @@ export default function Category() {
   )
 
 }
+
