@@ -65,6 +65,11 @@ export default function Category() {
     }
   }
 
+  if (!data){
+    return(
+      <div>Loading</div>
+    )
+  }
 
   return (
     <>
@@ -109,4 +114,5 @@ export default function Category() {
       <Footer />
     </>
   )
+
 }
