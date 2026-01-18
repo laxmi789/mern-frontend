@@ -86,6 +86,9 @@ export default function Cart() {
     }
   }
 
+  if (!cart) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <Header />
