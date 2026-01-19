@@ -80,7 +80,7 @@ export default function OrderIds() {
               </div>
               <div>
                 <p class="text-slate-500 text-sm font-medium">Total</p>
-                <p class="text-sm font-medium text-indigo-700 mt-2">{orders.totalPrice}</p>
+                <p class="text-sm font-medium text-indigo-700 mt-2">₹{orders.totalPrice}</p>
               </div>
             </div>
 
@@ -117,7 +117,7 @@ export default function OrderIds() {
                       <p class="text-slate-500 text-xs font-medium mt-1">{item.quantity}</p>
                     </div>
                     <div class="text-right">
-                      <p class="text-slate-900 text-sm font-semibold">{item.productPrice}</p>
+                      <p class="text-slate-900 text-sm font-semibold">₹{item.productPrice}</p>
                     </div>
                   </div>
                 )}
@@ -129,19 +129,19 @@ export default function OrderIds() {
               <div class="space-y-4">
                 <div class="flex justify-between">
                   <p class="text-sm text-slate-500 font-medium">Subtotal</p>
-                  <p class="text-slate-900 text-sm font-semibold">{orders.itemsPrice}</p>
+                  <p class="text-slate-900 text-sm font-semibold">₹{orders.itemsPrice}</p>
                 </div>
                 <div class="flex justify-between">
                   <p class="text-sm text-slate-500 font-medium">Shipping</p>
-                  <p class="text-slate-900 text-sm font-semibold">{orders.shippingPrice}</p>
+                  <p class="text-slate-900 text-sm font-semibold">₹{orders.shippingPrice}</p>
                 </div>
                 <div class="flex justify-between">
                   <p class="text-sm text-slate-500 font-medium">Tax</p>
-                  <p class="text-slate-900 text-sm font-semibold">{orders.taxPrice}</p>
+                  <p class="text-slate-900 text-sm font-semibold">₹{orders.taxPrice}</p>
                 </div>
                 <div class="flex justify-between pt-3 border-t border-gray-300">
                   <p class="text-[15px] font-semibold text-slate-900">Total</p>
-                  <p class="text-[15px] font-semibold text-indigo-700">{orders.totalPrice}</p>
+                  <p class="text-[15px] font-semibold text-indigo-700">₹{orders.totalPrice}</p>
                 </div>
               </div>
             </div>
