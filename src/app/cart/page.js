@@ -33,7 +33,7 @@ export default function Cart() {
         body: JSON.stringify({ id })
       })
 
-      if (response.status == 250) {
+      if (response.status == 200) {
         getCartDetail()
       }
     } catch (error) {
@@ -53,7 +53,7 @@ export default function Cart() {
         body: JSON.stringify({ id })
       })
 
-      if (response.status == 250) {
+      if (response.status == 200) {
         getCartDetail()
       }
     } catch (error) {
@@ -77,7 +77,7 @@ export default function Cart() {
         body: JSON.stringify({ id })
       })
 
-      if (response.status === 250) {
+      if (response.status === 200) {
         getCartDetail()
         //alert('deleted successfully')
       }
