@@ -10,8 +10,6 @@ export default function Product(){
 
   useEffect(() =>{
     async function getProduct(){
-      console.log(process.env.NEXT_PUBLIC_API_URL)
-
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/fetch_product/`)
       const data = await res.json()     
       setProducts(data.productlist)
@@ -61,7 +59,7 @@ async function addToCart(id, name, price){
           
             <div className="aspect-[3/4] bg-slate-100 w-full overflow-hidden">
                          <Link href={`/product/${u._id}`}>
- <img src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${u.images[0]}`} alt="Product-1" className="w-full h-full object-cover object-top hover:scale-110 transition-all duration-700" />
+ <img src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${u.mainImage}`} alt="Product-1" className="w-full h-full object-cover object-top hover:scale-110 transition-all duration-700" />
                 </Link>
             </div>
           
