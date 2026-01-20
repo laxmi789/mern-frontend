@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Product(){
   const [products,setProducts] = useState([])
-  const [btntext, setBtntext] = useState('Add To Cart')  
+  const [loadingId, setLoadingId] = useState(null)  
 
   useEffect(() =>{
     async function getProduct(){
@@ -19,7 +19,7 @@ export default function Product(){
 
 
 async function addToCart(id, name, price){ 
- setBtntext('Adding')
+ setLoadingId(id) 
     try{
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart`, {
       method:'POST',
@@ -37,8 +37,7 @@ async function addToCart(id, name, price){
       }
     
      if(response.status === 200){
-        setBtntext('Added')
-
+        setLoadingId(null)
        window.location.href = '/cart'
       }
     }catch(error){
@@ -72,7 +71,7 @@ async function addToCart(id, name, price){
             max-lg:bottom-20 max-lg:py-3 max-lg:bg-white/60">
               
               <button type="button" title="Add to cart" className="bg-transparent outline-0 border-0 cursor-pointer text-sm text-white py-2 px-8" onClick={() => addToCart(u._id, u.title, u.price)}>               
-                {btntext}
+                {loadingId === u._id ? 'Adding' : 'Add To Cart'}
               </button>
             </div>
             <div className="z-20 relative bg-white">
