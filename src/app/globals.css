@@ -68,7 +68,11 @@ button:hover, .button:hover{
 .icons a:hover {
   color: black; /* Color on hover */
 }
-
+@media (max-width: 767px){
+  button .button{
+    font-size:12px;
+  }
+}
 @keyframes moveleftRight{
 0% {
     transform: translateX(0px);
